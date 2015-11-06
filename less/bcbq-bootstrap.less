@@ -1,0 +1,140 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "bcbq-variables.less";
+@import "mixins.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "responsive-embed.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+
+body { position: relative; }
+
+.navbar-default {
+  background-color: #5D0900;
+  background-color: rgba(255,255,255,0.95);
+  .transition-property("background-color");
+  .transition-duration(250ms);
+  @media (min-width: @grid-float-breakpoint) { background-color: transparent; }
+  .small-navbar & {
+    background-color: #5D0900;
+    background-color: rgba(255,255,255,0.95);
+    min-height: 50px;
+  }
+  .navbar-brand {
+    display: inline-block;
+    padding: 5px 15px;
+    #logo {
+      width: 203px;
+      height: 50px;
+      @media (min-width: @screen-lg-min) { width: 406px; height: 100px; }
+      .transition-property("width, height");
+      .transition-duration(250ms);
+      .small-navbar & {
+        width: 203px;
+        height: 50px;
+      }
+      #tagline {
+        .transition-property(opacity);
+        .transition-duration(250ms);
+        @media (max-width: @grid-float-breakpoint-max) { display: none; }
+        .small-navbar & { opacity: 0; }
+      }
+    }
+  }
+  .navbar-nav {
+    @media (min-width: @screen-md-min) {
+      margin-top: 48px;
+      .transition-property("margin-top");
+      .transition-duration(250ms);
+      .small-navbar & { margin-top: 0; }
+    }
+  }
+}
+
+.jumbotron {
+  background-image: url('../img/city_back.jpg');
+  background-position: center center;
+  background-size: 100% auto;
+  background-size: cover;
+  padding-bottom: 200px;
+  padding-top: 100px;
+  @media (min-width: @screen-md-min) {
+    padding-bottom: 100px;
+    padding-top: 200px;
+  }
+}
+
+section {
+  border-bottom: 1px solid @gray-lighter;
+  margin-bottom: 120px;
+  padding-bottom: 120px;
+}
+
+.modal-dialog > .modal-content { border-radius: 0; }
+
+.col-mod-3-1 {
+  > .container {
+    @media (min-width: @screen-sm-min) { margin-left: -92%; }
+  }
+}
+.col-mod-3-2 {
+  > .container {
+    @media (min-width: @screen-sm-min) { margin-left: -205%; }
+  }
+}
+.col-mod-3-0 {
+  > .container {
+    @media (min-width: @screen-sm-min) { margin-left: -318%; }
+  }
+}
+.team-member {
+  .team-member-details { display: none; } 
+} 
