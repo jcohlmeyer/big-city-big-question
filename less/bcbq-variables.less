@@ -3,6 +3,13 @@
 // --------------------------------------------------
 
 
+//== Transitions
+
+@transition-duration-base: 250ms;
+@transition-delay-base: 10ms;
+@transition-timing-function-base: "ease-in-out";
+
+
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -102,9 +109,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -366,14 +373,14 @@
 
 @navbar-default-color:             #777;
 @navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            @navbar-default-bg;
 
 // Navbar links
 @navbar-default-link-color:                #777;
 @navbar-default-link-hover-color:          #333;
-@navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-hover-bg:             #fff;
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            @brand-primary;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
